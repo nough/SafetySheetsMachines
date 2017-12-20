@@ -11,6 +11,7 @@
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
 \pagestyle{empty}
+\usepackage{xstring}
 
 \include{base}
 
@@ -26,11 +27,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\machinePage{Large CNC Cutter}{Instructions Mandatory}{
-	Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.
-
-	Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).
-	
+\machinePage{Large CNC Cutter}{Noise}{
 	Be very careful with viruses/media -- as we cannot re-install the software on the PC.
 }{
 \action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
@@ -50,11 +47,7 @@ This machine contains commercial software which is locked to this specific hardw
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\machinePage{Abene Mill}{Instructions \& Approval Mandatory}{
-	Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.
-
-	Must have the `dangerous equipment waver' filed with the foundations trustees and been given approval or card access.	
+\machinePage{Abene Mill}{Approval}{
 }{
 \prohib{100}{Do not wear gloves}{Especially strong leather ones. They get caught easily and then `help' ripping body parts off.}
 \action{52}{Eye protection recommended}{Swarf will fly. Cutters can come loose. Broken cutters can fly very far and are razor sharp.}
@@ -73,10 +66,7 @@ Try to avoid getting coolant or similar on the slide-ways - especially the Y sli
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\machinePage{Wood Lathe}{Instructions Mandatory}{
-	Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.
-
-	Must have the `dangerous equipment waver' filed with the foundations trustees and been given approval or card access.	
+\machinePage{Wood Lathe}{Approval}{
 }{
 \action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
 \action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
@@ -86,6 +76,14 @@ Try to avoid getting coolant or similar on the slide-ways - especially the Y sli
 }{
 }
 
+\machinePage{Wood circle saw table}{Approval,Noise,Two}{
+}{
+\action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
+\action{52}{Eye protection recommended}{Especially when using very small cutters.}
+\action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
+}{
+}{
+}
 
 %\action{49}{General mandatory action sign}
 %\action{50}{Refer to instruction manual/booklet}

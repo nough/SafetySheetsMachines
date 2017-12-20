@@ -28,8 +28,25 @@
 \begin{center}
 \vspace{0cm}
 {\fontsize{50}{60} \textbf{#1}}
+ 
+\action{49}{\textbf{%
+ 	\IfSubStr{#2}{Approval}%
+		{Instructions \& Approval Mandatory}
+		{Instructions Mandatory}%
+}}{%
+Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.
 
-\action{49}{\textbf{#2}}{#3}
+#3
+
+
+\IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}
+
+
+\IfSubStr{#2}{Approval}{Must have the `dangerous equipment waiver' filed with the foundations trustees and been given approval or card access.}{}
+
+\IfSubStr{#2}{Two}{A second person must be present during operation. This person must have agreed to be your second and needs to know how to stop the machine.}
+
+}
 \begin{minipage}{\linewidth}
 	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#4\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#5\end{minipage}
