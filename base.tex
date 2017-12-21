@@ -1,3 +1,10 @@
+\usepackage{ifthen}
+\usepackage{float}
+\usepackage{calc}
+\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
+\usepackage{xstring}
+\usepackage{multicol}
+
 \newcommand{\decal}[5]{
 \begin{minipage}{\linewidth}
 	\begin{minipage}[t]{0.3\textwidth}
@@ -24,7 +31,7 @@
 \newcommand{\prohib}[3]{\decal{#1}{#2}{495}{690}{#3}}
 \newcommand{\warn}[3]{\decal{#1}{#2}{520}{715}{#3}}
 
-\newcommand{\machinePage}[6]{%
+\newcommand{\machinePage}[5]{%
 \begin{center}
 \vspace{0cm}
 {\fontsize{50}{60} \textbf{#1}}
@@ -41,19 +48,21 @@ Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can he
 
 \IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}
 
-
 \IfSubStr{#2}{Approval}{Must have the `dangerous equipment waiver' filed with the foundations trustees and been given approval or card access.}{}
 
 \IfSubStr{#2}{Two}{A second person must be present during operation. This person must have agreed to be your second and needs to know how to stop the machine.}
 
-}
-\begin{minipage}{\linewidth}
-	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#4\end{minipage}
-	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#5\end{minipage}
-\end{minipage}
-\vspace{0.2cm}
+\IfSubStr{#2}{Log}{Report any use in the log - and \textbf{pay for it}!}
 
-#6
+\IfSubStr{#2}{Dewalt}{Be sure to attach and power on the dust extractor.}
+}
+%\begin{minipage}{\linewidth}
+%	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#4\end{minipage}
+%	\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}#5\end{minipage}
+%\end{minipage}
+\begin{multicols}{2}#4\end{multicols}
+\vspace{0.2cm}
+#5
 
 If the machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
 

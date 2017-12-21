@@ -3,15 +3,13 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage{ifthen}
-\usepackage{float}
-\usepackage{calc}
-\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
+
+\pagestyle{empty}
+
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \usepackage[T1]{fontenc}
-\pagestyle{empty}
-\usepackage{xstring}
+
 
 \include{base}
 
@@ -26,14 +24,12 @@
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \machinePage{Large CNC Cutter}{Noise}{
 	Be very careful with viruses/media -- as we cannot re-install the software on the PC.
 }{
 \action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
 \action{52}{Eye protection recommended}{Especially when using very small cutters.}
 \action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
-}{
 \warn{124}{Machine can suddenly start}{%
 	Machine can suddenly start moving; and can move under its own command (even when the PC is off).
 	
@@ -46,13 +42,11 @@ This machine contains commercial software which is locked to this specific hardw
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \machinePage{Abene Mill}{Approval}{
 }{
 \prohib{100}{Do not wear gloves}{Especially strong leather ones. They get caught easily and then `help' ripping body parts off.}
 \action{52}{Eye protection recommended}{Swarf will fly. Cutters can come loose. Broken cutters can fly very far and are razor sharp.}
 \action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
-}{
 \warn{125}{Crushing}{Risk of crushing - the machine does not have any sensors that detect obstacles.
 
 Note that it can also run very slow; barely noticeable.}
@@ -65,25 +59,178 @@ Try to avoid getting coolant or similar on the slide-ways - especially the Y sli
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Metal Lathe}{Approval}{
+}{
+\prohib{100}{Do not wear gloves}{Especially strong leather ones. They get caught easily and then `help' ripping body parts off.}
+\action{52}{Eye protection recommended}{Swarf will fly. Cutters can come loose. Broken cutters can fly very far and are razor sharp.}
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\warn{125}{Crushing}{Risk of crushing - the machine does not have any sensors that detect obstacles.
 
+Note that it can also run very slow; barely noticeable.}
+\warn{117}{Slippery surface}{Floor will get very slippery; especially when using coolant.}
+\warn{128}{Sharp rotating elements}{This machine is essentially a cutter without any guard whatsoever.}
+}{
+Clean after use - especially when you have used coolant or have used metals that can rust easily or cause a galvanic reaction.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \machinePage{Wood Lathe}{Approval}{
+This machine is for WOOD only.
 }{
 \action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
 \action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
-}{
 \action{52}{Eye protection mandatory}{}
 \prohib{100}{Not recommended to wear gloves}{}
 }{
 }
 
-\machinePage{Wood circle saw table}{Approval,Noise,Two}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Mitre saw}{}{
+This machine is for WOOD only.
+
+Noise wise - be considerate to our neighbours - especially in the evenings.
+}{
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\action{52}{Eye protection recommended}{}
+\action{51}{Ear protection recommended}{Note also that this machine should not be used after 19:00 if it is that noisy}
+\action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
+\warn{128}{Sharp rotating elements}{So keep your fingers awa. Bypassing or using your fingers to hold the guard open is downright stupid.}
+}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Wood Circlesaw Table}{Approval,Noise,Two,Dewalt}{
+This machine is for WOOD only.
 }{
 \action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
 \action{52}{Eye protection recommended}{Especially when using very small cutters.}
 \action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
 }{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Wood Bandsaw}{Approval,Dewalt}{
+This machine is for WOOD only.
+}{
+\action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\action{52}{Eye protection recommended}{}
+\action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
 }{
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Planer}{Approval, Noise, Two}{
+This machine is for WOOD only.
+}{
+\warn{131}{Counterrotating rollers}{This machine will `pull' you in using counter rotating rollers. Which ALSO have a ratchet mechanism.}
+\action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\action{52}{Eye protection recommended}{}
+\action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Jointer}{Approval, Noise, Two,Dewalt}{
+This machine is for WOOD only.
+}{
+\warn{128}{Sharp rotating elements}{This machine is essentially a cutter without any guard whatsoever.}
+\action{51}{Ear protection strongly recommended}{Note also that this machine should not be used after 19:00}
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\action{52}{Eye protection recommended}{}
+\action{64}{Wear a mask when needed}{Especially when cutting materials such as MDF}
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Large CNC Laser cutter}{Logbook}{
+Be sure to check that cooling, air assist and fume extraction fan are all on.
+}{
+\warn{84}{Do not extinguish with water}{Use the $CO_2$ extinguisher (on the pilar to your left). It has a high voltage (kV) power supply.}
+\warn{110}{Laser beam}{Keep the lid closed at all times. If you bypass the safety interlocks - then you are an ass.}
+}{
+Do not forget to switch on (and off post use) the compressor and fume extraction fan (in the corner near the electric distribution board.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Small CNC Laser cutter,Extraction}{}{
+Be sure to check that water cooling pump, air pump (behind the machine) and fume extraction fan are all on.
+}{
+\warn{84}{Do not extinguish with water}{Use the $CO_2$ extinguisher (on the pilar to your left). It has a high voltage (kV) power supply.}
+\warn{110}{Laser beam}{Keep the lid closed at all times. If you bypass the safety interlocks - then you are an ass.}
+}{
+Do not forget to switch the fume extraction fan (in the corner near the electric distribution board) post use.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Large Grinder}{}{
+Noise wise - be considerate to our neighbours - especially in the evenings.
+}{
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\action{52}{Eye protection needed}{}}{
+\action{51}{Ear protection recommended}{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Hydraulic Press}{}{
+}{
+\action{52}{Eye protection needed}{}}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Sanding Cabinet}{}{
+Do not spray at your hands/fingers. The gloves \textbf{will} ultimately give way and they are not cheap.
+}{
+}{
+Do switch off the compressor after user.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Metal bandsaw}{}{
+Use plenty of cutting oil, WD40 or similar. 
+}{
+\action{58}{Wear protective clothing}{Wear tight fitting clothing, keep long hair out tied up, no jewellery or anything else that can be caught by the machine.}
+\warn{128}{Sharp rotating elements}{}
+\action{52}{Eye protection recommended}{}
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Vinyl cutter}{}{
+}{
+\warn{128}{Sharp rotating elements}{}
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{OCB Oven}{}{
+}{
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{T-Shirt hotplate}{}{
+}{
+}{
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Welding equipment}{Log}{
+}{
+\action{67}{Wear a welding mask}{}
+\action{74}{Use protective apron}{}
+}{
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\machinePage{Makerbot}{}{
+Do not walk away from the machine until the first 10 layers or so have been deposited. 
+
+Do not leave unattended for long periods.
+}{
+}{
+Keep the filament in a sealed container. Exposure to air (humidity) makes it brittle.
+}
+
 
 %\action{49}{General mandatory action sign}
 %\action{50}{Refer to instruction manual/booklet}
@@ -96,6 +243,7 @@ Try to avoid getting coolant or similar on the slide-ways - especially the Y sli
 %\action{67}{Wear a welding mask}
 %\action{74}{Use protective apron}
 %\prohib{75}{General prohibition sign}
+% \warn{110}{Laser beam}{Keep the lid closed at all times. If you bypass the safety interlocks - then you are an ass.}
 %\prohib{100}{Do not wear gloves}
 %\warn{117}{Slippery surface}
 %\warn{124}{Automatic start-up}
