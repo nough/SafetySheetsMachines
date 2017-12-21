@@ -61,7 +61,7 @@
 %			Extra footer/bottom of the page text
 %
 \newcommand{\machinePage}[5]{%
-	\begin{center}
+\begin{center}
 	\vspace{0cm}
 	{\fontsize{50}{60} \textbf{#1}}
  
@@ -75,24 +75,27 @@
 			
 			#3
 
-		\IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}
+		\IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}{}
 
 		\IfSubStr{#2}{Approval}{Must have the `dangerous equipment waiver' filed with the foundations trustees and been given approval or card access.}{}
 
-		\IfSubStr{#2}{Two}{A second person must be present during operation. This person must have agreed to be your second and needs to know how to stop the machine.}
+		\IfSubStr{#2}{Two}{A second person must be present during operation. This person must have agreed to be your second and needs to know how to stop the machine.}{}
 
-		\IfSubStr{#2}{Log}{Report any use in the log - and \textbf{pay for it}!}
+		\IfSubStr{#2}{Log}{Report any use in the log - and \textbf{pay for it}!}{}
 
-		\IfSubStr{#2}{Dewalt}{Be sure to attach and power on the dust extractor.}
+		\IfSubStr{#2}{Dewalt}{Be sure to attach and power on the dust extractor.}{}
 	}
 	\begin{multicols}{2}#4\end{multicols}
-		\vspace{0.2cm}
-		#5
+	
+	\vspace{0.2cm}
+	#5
 
-		If the machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
+	If the machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
 
-		\textbf{Report any damage, issues or accident within 24 hours to the mailing list.}
-		\end{center}
-	\pagebreak
+	\textbf{Report any damage, issues or accident within 24 hours to the mailing list.}
+\end{center}
+\vfill
+\tiny \today
+\pagebreak
 }
 
