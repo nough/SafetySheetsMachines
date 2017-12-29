@@ -68,12 +68,12 @@
 	\action{49}{\textbf{%
  		\IfSubStr{#2}{Approval}%
 			{Instructions \& Approval Mandatory}
-			{Instructions Mandatory}%
+			{\IfSubStr{#2}{NoMandatory}{Mandatory Instructions}{Instructions Mandatory}}%
 		}}
 		{%
-			Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.
+		\IfSubStr{#2}{NoMandatory}{}{Instructions \textbf{prior} to use are mandatory. Check the wiki for whom can help you.}
 			
-			#3
+		#3
 
 		\IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}{}
 
