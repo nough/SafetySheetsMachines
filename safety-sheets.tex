@@ -6,7 +6,7 @@
 \usepackage{gensymb}
 \usepackage{eurosym}
 
-\newcommand{\version}{v1.01}
+\newcommand{\version}{v1.02}
 \pagestyle{empty}
 
 \usepackage[scaled]{helvet}
@@ -25,6 +25,7 @@
 \setlength{\voffset}{-2cm}
 
 \begin{document}
+%: Intro
 \machinePage{Makerspace}{NoMandatory}{
 Observe all safety instructions. Instructions or approval is required for some of the machines. Ask someone for help, consult the wiki or email the mailing lists when in doubt.
 
@@ -50,6 +51,7 @@ Consider that others may be working at the space -- and you may be in close rang
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Large CNC Cutter
 \machinePage{Large CNC Cutter}{Noise}{
 	Be very careful with viruses/media -- as we cannot re-install the software on the PC.
 }{
@@ -68,6 +70,7 @@ This machine contains commercial software which is locked to this specific hardw
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Abene
 \machinePage{Abene Mill}{Approval}{
 }{
 \prohib{100}{Do not wear gloves}{Especially strong leather ones. They get caught easily and then `help' ripping body parts off.}
@@ -85,6 +88,7 @@ Try to avoid getting coolant or similar on the slide-ways -- especially the Y sl
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Metal Lathe
 \machinePage{Metal Lathe}{Approval}{
 Be careful when using the auto-feed; especially with cutters near the revolving head.
 }{
@@ -100,6 +104,7 @@ Note that it can also run very slow; barely noticeable.}
 Clean after use -- especially when you have used coolant or have used metals that can rust easily or cause a galvanic reaction.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Wood Lathe
 \machinePage{Wood Lathe}{Approval}{
 This machine is for WOOD only.
 }{
@@ -111,6 +116,7 @@ This machine is for WOOD only.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Afkortzaag
 \machinePage{Mitre saw}{Noise}{
 This machine is for WOOD only.
 
@@ -123,6 +129,7 @@ This machine is for WOOD only.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Circelzaag
 \machinePage{Wood Circle-saw Table}{Approval,Noise,Two,Dewalt}{
 This machine is for WOOD only.
 }{
@@ -135,6 +142,7 @@ This machine is for WOOD only.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Lintzaag
 \machinePage{Wood Bandsaw}{Approval,Dewalt}{
 This machine is for WOOD only.
 }{
@@ -146,6 +154,7 @@ This machine is for WOOD only.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Planer
 \machinePage{Planer}{Approval, Noise, Two}{
 This machine is for WOOD only.
 }{
@@ -159,6 +168,7 @@ This machine is for WOOD only.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Jointer
 \machinePage{Jointer}{Approval, Noise, Two,Dewalt}{
 This machine is for WOOD only.
 }{
@@ -172,6 +182,7 @@ This machine is for WOOD only.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Grote Laser
 \machinePage{Large CNC Laser cutter}{Logbook}{
 Be sure to check that cooling, air assist and fume extraction fan are all on.
 }{
@@ -182,6 +193,7 @@ Do not forget to switch on (and off post use) the compressor and fume extraction
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Kleine Laser
 \machinePage{Small CNC Laser cutter}{Extraction}{
 Be sure to check that water cooling pump, air pump (behind the machine) and fume extraction fan are all on.
 }{
@@ -192,6 +204,7 @@ Do not forget to switch the fume extraction fan (in the corner near the electric
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Slijpsteen
 \machinePage{Large Grinder}{}{
 Noise wise -- be considerate to our neighbours -- especially in the evenings.
 }{
@@ -201,12 +214,14 @@ Noise wise -- be considerate to our neighbours -- especially in the evenings.
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: 12 ton press
 \machinePage{Hydraulic Press}{}{
 }{
 \action{52}{Eye protection needed}{}}{
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Zandstraalcabine
 \machinePage{Sanding Cabinet}{}{
 Do not spray at your hands/fingers. The gloves \textbf{will} ultimately give way and they are not cheap.
 }{
@@ -215,6 +230,7 @@ Do switch off the compressor after use.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%: Metaal zaag
 \machinePage{Metal bandsaw}{}{
 Use plenty of cutting oil, \textsc{wd40} or similar. 
 
@@ -227,7 +243,8 @@ Do not leave unattended (not in the least as you may want to keep lubricating it
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\machinePage{Vinyl cutter}{}{
+%: CNC Vinyl snijder
+\machinePage{CNC Vinyl cutter}{}{
 }{
 \warn{128}{Sharp rotating elements}{}
 \warn{124}{Machine can suddenly start}{Also during power-up.}
@@ -235,12 +252,14 @@ Do not leave unattended (not in the least as you may want to keep lubricating it
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%:  Reflow oven
 \machinePage{PCB Reflow Oven}{}{
 }{
 }{
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%:  Hot plate
 \machinePage{T-Shirt hotplate}{}{
 }{
 \warn{123}{Hot surfaces}{The hotplate will become hot (obviously).}
@@ -248,6 +267,7 @@ Do not leave unattended (not in the least as you may want to keep lubricating it
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%:  Welding kit and gas
 \machinePage{Welding equipment}{Log}{
 Gas cylinders must be kept mounted in their stand with a \textbf{safety strap} at all times.
 
@@ -262,15 +282,16 @@ Do not forget to close the valves on the gas bottles post use.
 
 If you have empty bottles; be sure to get them refilled or remove them from the space. 
 
-There should \textbf{never be more than a 125 litres} of `water equivalent' volume present at the space (aggregated across all cylinders, empty or full, pressured or unpressured).
+There should \textbf{never be more than a 125 litres} of `water equivalent' volume present at the space (aggregated across all cylinders, \textbf{empty or full}, pressured or unpressured).
 
 This is because the space does \textbf{not have the required permits} for crossing the \textbf{125L limit}.
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\machinePage{Ultimaker}{}{
+%:   Ultimakers
+\machinePage{Ultimaker 1 \& 2}{}{
 Do not walk away from the machine until the first 10 layers or so have been deposited. 
 
-Do not leave unattended for long periods.
+OK to leave unattended after first 10 minutes when used with normal settings/materials.
 }{
 \warn{124}{Automatic start-up}{Machine may suddenly start moving. Also during power up.}
 \warn{123}{Hot surfaces}{The bed and the head will become (very) hot.}
@@ -278,6 +299,7 @@ Do not leave unattended for long periods.
 Keep the filament in a sealed container. Exposure to air (humidity) makes it brittle.
 }
 
+%:   Drill press
 \machinePage{Drill press}{NoMandatory}{
 Make sure you clamp your workpiece well - to avoid spinning.
 
@@ -295,6 +317,7 @@ Use drilling oil when needed (when in doubt - always use the green oil).
 Noise wise -- be considerate to our neighbours -- especially in the evenings.
 }
 
+%:   Pottery oven
 \machinePage{Pottery Oven}{Mandatory}{
 This oven is for pottery, ceramics, annealing and similar use. Up to 1200\degree C.
 
