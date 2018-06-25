@@ -4,6 +4,7 @@
 \usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 \usepackage{xstring}
 \usepackage{multicol}
+\usepackage[framemethod=TikZ]{mdframed}
 
 % Extract a symbol from the ISO document. And show it together with the title and warning text.
 %
@@ -65,10 +66,11 @@
 	\vspace{0cm}
 	{\fontsize{50}{60} \textbf{#1}}
  
-	\action{49}{\textbf{%
+	\action{49}{%
+		\textbf{%
  		\IfSubStr{#2}{Approval}%
 			{Instructions \& Approval Mandatory}
-			{\IfSubStr{#2}{NoMandatory}{Mandatory Instructions}{Instruction Mandatory}}%
+			{\IfSubStr{#2}{NoMandatory}{Mandatory Safety Rules}{Instruction Mandatory}}%
 		}}
 		{%
 		\IfSubStr{#2}{NoMandatory}{}{Instruction \textbf{prior} to use is \textbf{mandatory}. Check the wiki for who can help you.}
@@ -76,10 +78,13 @@
 			
 		#3
 
-		\IfSubStr{#2}{Noise}{Machine can only be used between 07:00 - 19:00 (be kind to our neighbours).}{}
+		\IfSubStr{#2}{Noise}{\smallicontext{\seventoseven}{
+			Machine can only be used between 07:00 - 19:00 (be kind to our neighbours)
+			}
+		}{}
 
-
-		\IfSubStr{#2}{Two}{A second person must be present during operation. This person must have agreed to be your second and needs to know how to stop the machine.}{}
+		\IfSubStr{#2}{Two}{\smallicontext{\twopersons}{A second person must be present during operation, have agreed to be your second, knows how to stop the machine and what to do in an emergency.	}
+		}{}
 
 		\IfSubStr{#2}{Log}{Report any use in the log - and \textbf{pay for it}!}{}
 
@@ -90,7 +95,7 @@
 	\vspace{0.2cm}
 	#5
 
-	If the machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
+	If a machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
 
 	\textbf{Report any damage, issues or accident within 24 hours to the mailing list.}
 \end{center}
@@ -100,4 +105,23 @@
 \end{flushright}
 \pagebreak
 }
+\newcommand{\smallicontext}[2]{%
+\begin{mdframed}[roundcorner=4pt] 
+\begin{tabular}{lp{0.8\linewidth}}
+#1 & #2 \\
+\end{tabular}
+\end{mdframed}
+}
+
+% Two person symbol
+\newcommand{\twopersons}{
+\raisebox{-.5\height}{\includegraphics[width=6mm]{File:Aiga_toiletsq_men}}\textbf{x 2} 
+}
+
+\newcommand{\seventoseven}{
+\raisebox{-.5\height}{\includegraphics[width=10mm]{clock-limits}}
+}
+
+
+
 
