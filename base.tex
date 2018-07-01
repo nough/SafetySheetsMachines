@@ -1,3 +1,9 @@
+\usepackage[pdftex,a4paper]{geometry}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{eurosym}
 \usepackage{ifthen}
 \usepackage{float}
 \usepackage{calc}
@@ -5,7 +11,23 @@
 \usepackage{xstring}
 \usepackage{multicol}
 \usepackage[framemethod=TikZ]{mdframed}
+\usepackage[T1]{fontenc}
 
+% Switch font comprehensively
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+
+% Use as much of the page as we can.
+\pagestyle{empty}
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1.2em}
+\setlength{\textheight}{28cm}
+\setlength{\textwidth}{19cm}
+\setlength{\hoffset}{-2cm}
+\setlength{\voffset}{-2cm}
+
+% DECAL
+%
 % Extract a symbol from the ISO document. And show it together with the title and warning text.
 %
 % Params:		Page with the symbol on it.
@@ -37,6 +59,24 @@
 \end{minipage}
 }
 
+
+% Some home made symbols which are not part of the official ISO list of symbols:
+%
+% Two person symbol
+\newcommand{\twopersons}{
+\raisebox{-.5\height}{\includegraphics[width=6mm]{File:Aiga_toiletsq_men}}\textbf{x 2} 
+}
+
+% Some home made symbols which are not part of the official ISO list of symbols:
+% Clock with 7-19 symbol
+%
+\newcommand{\seventoseven}{
+\raisebox{-.5\height}{\includegraphics[width=10mm]{clock-limits}}
+}
+
+
+% Define classes for Action, Prohibit and Warn
+%
 % Turns out that the symbols are a bit shifted in the Y position or size depending on what
 % class they are. So we split them into the three sections that have height differences.
 %
@@ -48,6 +88,17 @@
 \newcommand{\prohib}[3]{\decal{#1}{#2}{495}{690}{#3}}
 \newcommand{\warn}[3]{\decal{#1}{#2}{520}{715}{#3}}
 
+%% Convenience round box to call extra attention to something.
+%%
+\newcommand{\smallicontext}[2]{%
+\begin{mdframed}[roundcorner=4pt] 
+\begin{tabular}{lp{0.8\linewidth}}
+#1 & #2 \\
+\end{tabular}
+\end{mdframed}
+}
+
+% machinePage
 % A full page with a machine on it.
 %
 % Params:		Machine name
@@ -105,22 +156,7 @@
 \end{flushright}
 \pagebreak
 }
-\newcommand{\smallicontext}[2]{%
-\begin{mdframed}[roundcorner=4pt] 
-\begin{tabular}{lp{0.8\linewidth}}
-#1 & #2 \\
-\end{tabular}
-\end{mdframed}
-}
 
-% Two person symbol
-\newcommand{\twopersons}{
-\raisebox{-.5\height}{\includegraphics[width=6mm]{File:Aiga_toiletsq_men}}\textbf{x 2} 
-}
-
-\newcommand{\seventoseven}{
-\raisebox{-.5\height}{\includegraphics[width=10mm]{clock-limits}}
-}
 
 
 
