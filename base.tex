@@ -103,11 +103,11 @@
 %
 % Params:		Machine name
 %			Tokens for standard instrutions: Zero or more from
-%				Approval		Trustee approval needed.
-%				Noise		Not after 19:00
-%				Two			Two people required
-%				Log			use must be logged
-%				Dewalt		Attach dewalt dutch extractor.
+%				Induction		Induction needed.
+%				InPerson		In Person Induction
+%				Online			Online Induction
+%				Log				use must be logged
+%				Dust			Attach dewalt dutch extractor.
 %			Specific instructions 
 %			Warnings, Symbols
 %			Extra footer/bottom of the page text
@@ -117,38 +117,38 @@
 	\vspace{0cm}
 	{\fontsize{50}{60} \textbf{#1}}
  
-	\action{49}{%
+	\action{49}{% Bold text states either "Instructions & Induction Mandatory" / "Safety Rules / Instruction Mandatory.
 		\textbf{%
- 		\IfSubStr{#2}{Approval}%
-			{Instructions \& Approval Mandatory}
-			{\IfSubStr{#2}{NoMandatory}{Mandatory Safety Rules}{Instruction Mandatory}}%
-		}}
-		{%
-		\IfSubStr{#2}{NoMandatory}{}{Instruction \textbf{prior} to use is \textbf{mandatory}. Check the wiki for who can help you.}
-		\IfSubStr{#2}{Approval}{You must also have a `\textbf{dangerous equipment waiver}' filed with the foundations trustees and been given \textbf{approval or card access} to use the machine.}{}
+ 		\IfSubStr{#2}{Induction}{Instructions \& Induction Mandatory}{%If input includes "Induction", then write "Instructions and Induction mandatory", else
+ 			\IfSubStr{#2}{NoMandatory}{Safety Rules}{Instruction Mandatory}%If input includes "NoMandatory", follow Mandatory Safety Rules, else "Instruction Mandatory".
+ 		}}}
+		{% subtext for Induction vs NoMandatory
+		\IfSubStr{#2}{NoMandatory}{}{Instruction \textbf{prior} to use is \textbf{mandatory}. Check the forum for who can help you.}
+		\IfSubStr{#2}{Induction}{You must also have a `\textbf{dangerous equipment waiver}' filed with the foundations trustees and been given \textbf{Induction or card access} to use the machine.}{}
 			
-		#3
+		#3 % input 3
 
-		\IfSubStr{#2}{Noise}{\smallicontext{\seventoseven}{
-			Machine can only be used between 07:00 - 19:00 (be kind to our neighbours)
-			}
-		}{}
+		%\IfSubStr{#2}{Noise}{\smallicontext{\seventoseven}{
+		%	Machine can only be used between 07:00 - 19:00 (be kind to our neighbours)
+		%	}
+		%}{}
 
-		\IfSubStr{#2}{Two}{\smallicontext{\twopersons}{A second person must be present during operation, have agreed to be your second, knows how to stop the machine and what to do in an emergency, including opening the door for paramedics if needed.	}
-		}{}
-
+		%\IfSubStr{#2}{Two}{\smallicontext{\twopersons}{A second person must be present during operation, have agreed to be your second, knows how to stop the machine and what to do in an emergency, including opening the door for paramedics if needed.	}
+		%}{}
+		\IfSubStr{#2}{InPerson}{Induction is in person. Book it on the forum.}{}
+		\IfSubStr{#2}{Online}{Induction is online. Complete via the Wiki to receive the unlock code.}{}
 		\IfSubStr{#2}{Log}{Report any use in the log - and \textbf{pay for it}!}{}
 
-		\IfSubStr{#2}{Dewalt}{Be sure to attach and power on the dust extractor.}{}
+		\IfSubStr{#2}{Dust}{Be sure to attach and power on the dust extractor.}{}
 	}
 	\begin{multicols}{2}#4\end{multicols}
 	
 	\vspace{0.2cm}
 	#5
 
-	If a machine is not clean or appears broken - then report this to the mailing list. Clean/fix prior to use.
+	If a machine is not clean or appears broken - then report this to the forum. Clean/fix prior to use.
 
-	\textbf{Report any damage, issues or accident within 24 hours to the mailing list.}
+	\textbf{Report any damage, issues or accident within 24 hours to the forum.}
 \end{center}
 \vfill
 \begin{flushright}
